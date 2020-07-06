@@ -1,0 +1,55 @@
+<p-button label="Enter Data To Analyse" (onClick)="openDialog()" styleClass="ui-button-success"
+  [style]="{'margin-bottom': '10px'}"></p-button>
+
+
+
+<p-panel *ngIf="userObjectResult" header="Result of first name and last name analyse" [style]="{'margin-bottom':'10px'}">
+  <p>The number of VOWELS: {{userObjectResult?.amountOfVowels}} </p>
+  <p>The number of CONSTENANTS: {{userObjectResult?.amountOfConstenants}} </p>
+  <p>The firstname + last name entered: {{userObjectResult?.firstAndLastName}} </p>
+  <p>The reverse version of the firstname and lastname: {{userObjectResult?.reversedFirstAndLastName}} </p>
+</p-panel>
+
+<p-panel *ngIf="userObjectResult" header="User object in json format">
+  <pre>{{userObjectResult?.jsonString | json}}</pre>
+</p-panel>
+
+<p-dialog header="Data To Analyse" [(visible)]="displayDialog" [modal]="true" [style]="{width: '600px'}"
+  (onShow)="onShow()" (onHide)="onHide()">
+  <form #ngFormUser="ngForm" [formGroup]="userForm" (ngSubmit)="onSubmitForm($event)">
+    <div class="ui-fluid p-formgrid p-grid">
+      <div class="p-field p-col-12">
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" pInputText formControlName="firstName">
+      </div>
+      <div class="p-field p-col-12">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" pInputText formControlName="lastName">
+      </div>
+      <div class="p-field p-col-12">
+        <label for="socialSkills">Social Skills (separated by enter)</label>
+        <p-chips id="socialSkills" formControlName="socialSkills"></p-chips>
+      </div>
+      <div class="p-field p-col-12">
+        <label for="socialAccounts">Social Accounts</label>
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="fa fa-twitter" style="line-height: 1.25;"></i></span>
+          <input type="text" pInputText placeholder="Twitter" formControlName="twitterAddress">
+          <span class="ui-inputgroup-addon"><i class="fa fa-linkedin" style="line-height: 1.25;"></i></span>
+          <input type="text" pInputText placeholder="LinkedIn" formControlName="linkedInAddress">
+          <span class="ui-inputgroup-addon"><i class="fa fa-facebook" style="line-height: 1.25;"></i></span>
+          <input type="text" pInputText placeholder="Facebook" formControlName="facebookAddress">
+        </div>
+      </div>
+
+    </div>
+  </form>
+  <p-footer>
+    <button type="button" pButton icon="pi pi-check" (click)="onSubmitClick()" label="Analyse"
+      [disabled]="!ngFormUser.valid"></button>
+    <button type="button" pButton icon="pi pi-times" (click)="onHide()" label="Close"
+      class="ui-button-secondary"></button>
+  </p-footer>
+</p-dialog>
+
+<p-toast></p-toast>

@@ -1,0 +1,8 @@
+C:\Users\thiba\source\repos\InimcoDevTest\Business Layer\bin\Debug\netcoreapp3.1\Business Layer.deps.json
+C:\Users\thiba\source\repos\InimcoDevTest\Business Layer\bin\Debug\netcoreapp3.1\Business Layer.dll
+C:\Users\thiba\source\repos\InimcoDevTest\Business Layer\bin\Debug\netcoreapp3.1\Business Layer.pdb
+C:\Users\thiba\source\repos\InimcoDevTest\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.AssemblyInfoInputs.cache
+C:\Users\thiba\source\repos\InimcoDevTest\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.AssemblyInfo.cs
+C:\Users\thiba\source\repos\InimcoDevTest\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csproj.CoreCompileInputs.cache
+C:\Users\thiba\source\repos\InimcoDevTest\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.dll
+C:\Users\thiba\source\repos\InimcoDevTest\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.pdb
