@@ -51,7 +51,9 @@ namespace InimcoDevTest.Controllers
                 //returns the amount of vowels in the string
                 userResultObject.reversedFirstAndLastName = this.textAnalyserService.reverseString(firstAndLastName.ToString());
 
+                //returns the json string that is created by serializing the user object.
                 userResultObject.jsonString = JsonConvert.SerializeObject(user);
+
                 return userResultObject;
             }
             catch (Exception e)
